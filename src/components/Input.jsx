@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { MyContext } from "./context/MyContext";
+import location from "../../public/location.png"
 
 export default function Input() {
   const { setSearchCity,text } = useContext(MyContext);
@@ -18,7 +19,7 @@ export default function Input() {
   return (
     <div>
       <div className="flex text-white mb-2">
-        <img src="https://cdn-icons-png.freepik.com/512/7711/7711464.png" className="w-10 h-10" />
+        <img src={location} className="w-10 h-10" />
         <h1 className="text-2xl">{text?.location?.name}</h1>
       </div>
     <div className="w-full flex gap-3">
